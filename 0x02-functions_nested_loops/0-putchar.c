@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
 * main - C program that uses puts statement for printing
 * Return: 0 always
