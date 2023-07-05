@@ -8,12 +8,12 @@
  *
  * Return: This is the result
  */
-int my_sqrt_recursion(int a, int b)
+int _sqrt_recursion(int a, int b)
 {
 	if (a == (b * b))
 		return (b);
 	else if ((b * b) >= a)
 		return (-1);
 	else
-		return (my_sqrt_recursion(a, b + 1));
+		return (_sqrt_recursion(a, b + 1));
 }
