@@ -13,31 +13,27 @@ nclude "main.h"
 
 unsigned int binary_to_uint(const char *b)
 {
-		int i = 0, m = 1;/*string length*/
-			unsigned int result = 0;
+	int i = 0, m = 1;/*string length*/
+	unsigned int result = 0;
 
-				/*if b is null return 0*/
-				if (!b)
-							return (0);
+	if (!b)
+		return (0);
 
-					/*loop thru the string*/
-					while (*(b + i) != '\0')
-							{
-										/*it the current character is not 1 or 0 return 0*/
-										if (*(b + i) != '0' && *(b + i) != '1')
-														return (0);
+	while (*(b + i) != '\0')
+	{
+		if (*(b + i) != '0' && *(b + i) != '1')
+			return (0);
+		i++;
+	}
+	
+	--i;
 
-												i++;
-													}
+	while (i >= 0)
+	{
+		result += (*(b + i) - '0') * m;
+		m *= 2;
+		--i;
+	}
 
-						--i;
-
-							while (i >= 0)
-									{
-												result += (*(b + i) - '0') * m;
-														m *= 2;
-																--i;
-																	}
-
-								return (result);
+	return (result);
 }
