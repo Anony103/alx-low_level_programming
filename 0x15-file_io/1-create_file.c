@@ -19,7 +19,7 @@ int create_file(const char *filename, char *text_content)
 	if (fd == -1)
 		return (-1);
 
-	if (tect_content)
+	if (text_content)
 	{
 
 		for (size = 0; text_content[size] != '\0'; size++);
@@ -29,4 +29,3 @@ int create_file(const char *filename, char *text_content)
 	close(fd);
 	return (1);
 }
-
